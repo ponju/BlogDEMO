@@ -1,0 +1,14 @@
+@mixin acordion_container{
+    overflow: hidden;
+}
+@mixin acordion_scope{
+    width:100%;
+    height:100%;
+    white-space: nowrap;
+    margin:0;
+    padding:0;
+}
+
+.acordion_contents{
+    position: relative;
+}

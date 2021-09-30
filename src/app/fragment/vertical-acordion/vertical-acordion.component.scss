@@ -1,0 +1,14 @@
+@import "../angular-animations/acordion";
+
+.acordion_container{
+    @include acordion_container;
+}
+
+.acordion_scope{
+    @include acordion_scope;
+}
+
+.absolute{
+    position: absolute;
+    top:0;
+}

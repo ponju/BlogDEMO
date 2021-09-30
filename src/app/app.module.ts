@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,8 +18,9 @@ import "@fortawesome/fontawesome-free/js/solid.js"
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule ,
     AppRoutingModule,
-    FragmentModule //自動で入る
+    FragmentModule ,
   ],
   providers: [],
   bootstrap: [AppComponent]

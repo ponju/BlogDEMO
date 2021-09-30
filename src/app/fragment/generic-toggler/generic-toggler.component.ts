@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { AbstractTogglable } from '../abstract-togglable/abstract-togglable';
 
 @Component({
   selector: 'generic-toggler',
@@ -11,8 +12,11 @@ export class GenericTogglerComponent implements OnInit {
   @Input()
   text?:string;
 
+  @Input()
+  target?:AbstractTogglable;
+
   toggle(){
-    console.log("toggle target");
+    this.target?.toggle();
   }
 
   constructor() { }
