@@ -1,1 +1,7 @@
-<p>horizontal-acordion works!</p>
+<div class="acordion_container" *ngIf="active" [@horizontalAcordion]>
+    <div class="acordion_scope">
+        <div class="acordion_contents">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>
