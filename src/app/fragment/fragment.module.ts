@@ -4,13 +4,15 @@ import { SiteHeaderComponent } from './site-header/site-header.component';
 import { GenericTogglerComponent } from './generic-toggler/generic-toggler.component';
 import { VerticalAcordionComponent } from './vertical-acordion/vertical-acordion.component';
 import { HorizontalAcordionComponent } from './horizontal-acordion/horizontal-acordion.component';
+import { BackScreenComponent } from './back-screen/back-screen.component';
 
 @NgModule({
   declarations: [
     SiteHeaderComponent,
     GenericTogglerComponent,
     VerticalAcordionComponent,
-    HorizontalAcordionComponent
+    HorizontalAcordionComponent,
+    BackScreenComponent
   ],
   imports: [
     CommonModule
@@ -19,7 +21,8 @@ import { HorizontalAcordionComponent } from './horizontal-acordion/horizontal-ac
     SiteHeaderComponent,
     GenericTogglerComponent,
     VerticalAcordionComponent,
-    HorizontalAcordionComponent
+    HorizontalAcordionComponent,
+    BackScreenComponent
   ]
 })
 export class FragmentModule { }
