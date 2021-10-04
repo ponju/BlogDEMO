@@ -12,6 +12,8 @@
     @include contents_container;
     display: flex;
     align-items: center;
+    border-right:solid 1px $color-separater;
+    border-left:solid 1px $color-separater;
 }
 .site_header__logo{
     max-height: 100%;
@@ -19,10 +21,9 @@
     flex-shrink: 0;
 }
 .site_header__title{
+    flex-shrink:1;
     margin-left:1rem;
     font-size:16pt;
-    flex-shrink:0;
-    flex-grow: 1;
 }
 .global_menu_call{
     @include inversive_skin;
@@ -32,7 +33,6 @@
 .global_menu_call.on{
     @include contents_skin;
 }
-
 .global_nav_wrapper{
     width:100%;
 }
@@ -45,6 +45,7 @@
     left:0;
     right:0;
 }
+
 .global_menu__list{
     @include contents_container;
 }
@@ -54,6 +55,10 @@
     width:100%;
     border-bottom:solid 1px $color-separater;
 }
+.global_menu__item__icon{
+    margin-right:1rem;
+}
+
 .global_menu__item__link{
     padding:1rem;
     width:100%;

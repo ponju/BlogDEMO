@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavMap } from './fragment/models/nav-map';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'DEMO(STATIC)';
+  naviRoutes:NavMap[]=[
+    {title:"HOME",route:"/",faClazz:"fas fa-home"},
+  ]
 }

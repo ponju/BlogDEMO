@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { NavMap } from '../models/nav-map';
 
 @Component({
   selector: 'site-header',
@@ -11,7 +12,10 @@ export class SiteHeaderComponent implements OnInit {
   @Input()
   logoURL?:string
   @Input()
-  isTopLayout?:string
+  isTopLayout?:boolean
+  @Input()
+  naviMap?:NavMap[]
+
   constructor() { }
 
   ngOnInit(): void {

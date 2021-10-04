@@ -12,6 +12,7 @@ import "@fortawesome/fontawesome-free/js/brands.js"
 import "@fortawesome/fontawesome-free/js/regular.js"
 import "@fortawesome/fontawesome-free/js/solid.js";
 import { ScullyLibModule } from '@scullyio/ng-lib'
+import { NavMap } from './fragment/models/nav-map';
 
 @NgModule({
   declarations: [
@@ -27,4 +28,5 @@ import { ScullyLibModule } from '@scullyio/ng-lib'
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+}

@@ -8,8 +8,7 @@
 <nav class="global_nav">
   <v-acordion #menu class="global_menu">
     <ul class="global_menu__list">
-      <li class="global_menu__item"><a class="global_menu__item__link" href="/">HOME</a></li>
-      <li class="global_menu__item"><a class="global_menu__item__link">ABOUT</a></li>
+      <li class="global_menu__item" *ngFor="let route of naviMap"><a class="global_menu__item__link" [href]="route.route"><i [class]="'global_menu__item__icon '+route.faClazz"></i>{{route.title}}</a></li>
     </ul>
   </v-acordion>
 </nav>
