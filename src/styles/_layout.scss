@@ -1,0 +1,13 @@
+@import "./settings/size";
+
+
+
+html{
+    font-size:$size-txt_default;
+}
+
+@mixin contents_container{
+    max-width:$size-contents_width;
+    width:100%;
+    margin:auto;
+}

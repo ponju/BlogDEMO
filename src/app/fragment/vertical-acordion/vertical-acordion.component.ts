@@ -11,10 +11,10 @@ import { verticalAcordion } from '../angular-animations/acordion';
   ]
 })
 export class VerticalAcordionComponent implements AbstractTogglable,OnInit { 
-  active=false;
+  active:boolean=false;
   constructor(){}
   toggle(): void {
-   this. active=!this.active;
+   this.active=!this.active;
   }
   turnON(): void {
     this.active=true;

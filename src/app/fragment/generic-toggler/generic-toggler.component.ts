@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterContentChecked, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { AbstractTogglable } from '../abstract-togglable/abstract-togglable';
 
 @Component({
@@ -8,13 +8,17 @@ import { AbstractTogglable } from '../abstract-togglable/abstract-togglable';
 })
 export class GenericTogglerComponent implements OnInit {
   @Input()
-  faClazz?:string;
+  target?:AbstractTogglable;
+  @Input()
+  activeFA?:string;
+  @Input()
+  offFA?:string;
   @Input()
   text?:string;
 
-  @Input()
-  target?:AbstractTogglable;
-
+  get active(){
+    return this.target?this.target.active:false;
+  }
   toggle(){
     this.target?.toggle();
   }

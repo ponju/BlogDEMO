@@ -1,14 +1,16 @@
 <header class="site_header">
+  <div class="site_header_inner">
     <img class="site_header__logo" [src]="logoURL">
     <div class="site_header__title">{{title}}</div>
-    <generic-toggler class="global_menu_call" faClazz="fas fa-bars" text="MENU" [target]="menu"></generic-toggler>
+    <generic-toggler class="global_menu_call"  [ngClass]="{on:toggler.active}" #toggler [target]="menu" offFA="fas fa-bars" activeFA="fas fa-times" text="MENU" ></generic-toggler>
+  </div>
 </header>
-<nav class="global_menu">
-    <v-acordion #menu>
-        <ul class="global_menu__list">
-            <li><a class="global_menu__item">HOME</a></li>
-            <li><a class="global_menu__item">ABOUT</a></li>
-        </ul>
-    </v-acordion>
+<nav class="global_nav">
+  <v-acordion #menu class="global_menu">
+    <ul class="global_menu__list">
+      <li class="global_menu__item"><a class="global_menu__item__link" href="/">HOME</a></li>
+      <li class="global_menu__item"><a class="global_menu__item__link">ABOUT</a></li>
+    </ul>
+  </v-acordion>
 </nav>
 <back-screen [connected]="menu"></back-screen>

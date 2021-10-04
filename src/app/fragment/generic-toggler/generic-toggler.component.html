@@ -1,4 +1,4 @@
 <div class="generic_toggler" (click)="toggle()">
-    <div class="generic_toggler__icon"><i [class]="faClazz"></i></div>
+    <div class="generic_toggler__icon"><span *ngIf="active"><i [class]="activeFA"></i></span><span *ngIf="!active"><i [class]="offFA"></i></span></div>
     <div class="generic_toggler__text">{{text}}</div>
 </div>

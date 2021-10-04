@@ -1,3 +1,5 @@
+@import "/src/styles.scss";
+
 .generic_toggler{
     display:flex;
     flex-wrap: wrap;
@@ -5,15 +7,13 @@
     justify-content: center;
     text-align: center;;
 
-    width:36px;
-    height:36px;
-    background-color:black;
-    color:white;
+    width:48px;
+    height:48px;
 }
 
 .generic_toggler__icon{
     width:100%;
-    font-size:14pt;
+    font-size:16pt;
     display: flex;
     align-items: center;
     justify-content: center;;

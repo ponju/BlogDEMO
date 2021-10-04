@@ -10,6 +10,8 @@ export class SiteHeaderComponent implements OnInit {
   title?:string
   @Input()
   logoURL?:string
+  @Input()
+  isTopLayout?:string
   constructor() { }
 
   ngOnInit(): void {

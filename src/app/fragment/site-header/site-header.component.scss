@@ -1,11 +1,17 @@
+@import "/src/styles.scss";
+
 .site_header{
-    display: flex;
-    position: relative;
-    align-items: center;
-    background-color: #f5f5f5;
-    border-bottom:solid 1px gainsboro;
+    @include contents_skin;
+    @include inversive_skin;
+    border-bottom:solid 1px $color-separater;
     width:100%;
     z-index:1;
+    overflow: hidden;
+}
+.site_header_inner{
+    @include contents_container;
+    display: flex;
+    align-items: center;
 }
 .site_header__logo{
     max-height: 100%;
@@ -19,17 +25,46 @@
     flex-grow: 1;
 }
 .global_menu_call{
+    @include inversive_skin;
     margin-left:auto;
+    border-left:solid 1px $color-separater;
+}
+.global_menu_call.on{
+    @include contents_skin;
 }
 
-.global_menu{
-    display: block;
-    background-color: black;
-    color:white;
-    position: absolute;
+.global_nav_wrapper{
     width:100%;
 }
-
+.global_nav{
+    @include inversive_skin;
+}
+.global_menu{
+    position: absolute;
+    left:0;
+    right:0;
+}
+.global_menu__list{
+    @include contents_container;
+}
+.global_menu__item{
+    margin:auto;
+    list-style: none;
+    width:100%;
+    border-bottom:solid 1px $color-separater;
+}
+.global_menu__item__link{
+    padding:1rem;
+    width:100%;
+    height:100%;
+    display: block;
+    border:none;
+    text-decoration: none;
+}
+.global_menu__item__link,.global_menu__item__link:visited{
+    color:$color-contents_txt;
+    background-color: $color-contents_bg;
+}
 .generic_toggler{
     margin-right:0;
 }

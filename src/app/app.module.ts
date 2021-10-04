@@ -10,7 +10,8 @@ import { FragmentModule } from './fragment/fragment.module';
 import "@fortawesome/fontawesome-free/js/fontawesome.js"
 import "@fortawesome/fontawesome-free/js/brands.js"
 import "@fortawesome/fontawesome-free/js/regular.js"
-import "@fortawesome/fontawesome-free/js/solid.js"
+import "@fortawesome/fontawesome-free/js/solid.js";
+import { ScullyLibModule } from '@scullyio/ng-lib'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import "@fortawesome/fontawesome-free/js/solid.js"
     BrowserModule,
     BrowserAnimationsModule ,
     AppRoutingModule,
-    FragmentModule ,
+    FragmentModule,
+    ScullyLibModule ,
   ],
   providers: [],
   bootstrap: [AppComponent]

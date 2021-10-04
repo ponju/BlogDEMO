@@ -1,0 +1,14 @@
+@import "./settings/colors";
+
+@mixin contents_skin{
+    color:$color-contents_txt;
+    background-color:$color-contents_bg;
+}
+@mixin inversive_skin{
+    color:$color-inversive_txt;
+    background-color:$color-inversive_bg;
+}
+
+html{
+    background-color:$color-main_bg;
+}
