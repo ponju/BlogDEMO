@@ -5,7 +5,7 @@
     @include inversive_skin;
     border-bottom:solid 1px $color-separater;
     width:100%;
-    z-index:1;
+    z-index:200;
     overflow: hidden;
 }
 .site_header_inner{
@@ -38,6 +38,7 @@
 }
 .global_nav{
     @include inversive_skin;
+    z-index:100;
 }
 .global_menu{
     position: absolute;
