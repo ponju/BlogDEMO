@@ -15,6 +15,14 @@
     border-right:solid 1px $color-separater;
     border-left:solid 1px $color-separater;
 }
+
+.site_header__branding{
+    @include inversive_skin;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
 .site_header__logo{
     max-height: 100%;
     max-width:48px;

@@ -5,6 +5,7 @@ import { GenericTogglerComponent } from './generic-toggler/generic-toggler.compo
 import { VerticalAcordionComponent } from './vertical-acordion/vertical-acordion.component';
 import { HorizontalAcordionComponent } from './horizontal-acordion/horizontal-acordion.component';
 import { BackScreenComponent } from './back-screen/back-screen.component';
+import { ArticleListComponent } from './article-list/article-list.component';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { BackScreenComponent } from './back-screen/back-screen.component';
     GenericTogglerComponent,
     VerticalAcordionComponent,
     HorizontalAcordionComponent,
-    BackScreenComponent
+    BackScreenComponent,
+    ArticleListComponent
   ],
   imports: [
     CommonModule
@@ -22,7 +24,8 @@ import { BackScreenComponent } from './back-screen/back-screen.component';
     GenericTogglerComponent,
     VerticalAcordionComponent,
     HorizontalAcordionComponent,
-    BackScreenComponent
+    BackScreenComponent,
+    ArticleListComponent
   ]
 })
 export class FragmentModule { }

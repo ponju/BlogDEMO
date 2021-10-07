@@ -10,6 +10,8 @@ export class SiteHeaderComponent implements OnInit {
   @Input()
   title?:string
   @Input()
+  homeRoute?:string;
+  @Input()
   logoURL?:string
   @Input()
   isTopLayout?:boolean

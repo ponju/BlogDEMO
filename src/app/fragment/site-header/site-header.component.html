@@ -1,7 +1,9 @@
 <header class="site_header">
   <div class="site_header_inner">
-    <img class="site_header__logo" [src]="logoURL">
-    <div class="site_header__title">{{title}}</div>
+    <a class="site_header__branding">
+      <img class="site_header__logo" [src]="logoURL">
+      <div class="site_header__title">{{title}}</div>
+    </a>
     <generic-toggler class="global_menu_call"  [ngClass]="{on:toggler.active}" #toggler [target]="menu" offFA="fas fa-bars" activeFA="fas fa-times" text="MENU" ></generic-toggler>
   </div>
 </header>

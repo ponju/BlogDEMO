@@ -1,16 +1,15 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-
-import {BlogComponent} from './blog.component';
+import { ArchivePageComponent } from './archive-page.component';
 
 const routes: Routes = [
   {
-    path: ':slug',
-    component: BlogComponent,
+    path: ':page',
+    component: ArchivePageComponent,
   },
   {
     path: '**',
-    component: BlogComponent,
+    component: ArchivePageComponent,
   }
 ];
 
@@ -18,5 +17,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class BlogRoutingModule {}
+export class ArchivePageRoutingModule {}
 
