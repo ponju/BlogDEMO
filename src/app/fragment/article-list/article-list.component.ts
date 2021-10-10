@@ -8,7 +8,7 @@ import { Post, Postable } from 'src/model/postable';
 })
 export class ArticleListComponent implements OnInit {
   @Input()
-  posts?:Postable[]
+  posts!:Postable[]
   constructor() { }
 
   ngOnInit(): void {

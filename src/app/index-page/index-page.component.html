@@ -1,0 +1,6 @@
+<div class="page_columns_container">
+  <main class="main_column">
+    <h1 class="indexing">Latest Posts</h1>
+    <article-list *ngIf="(context$|async)!=null"[posts]="(context$|async)!.archives|slice:from:till"></article-list>
+  </main>
+</div>

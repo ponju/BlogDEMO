@@ -1,0 +1,10 @@
+@import "/src/styles/layout";
+
+.main_column {
+  @include contents-container;
+}
+
+.indexing{
+    margin:1rem 0;
+  }
+  

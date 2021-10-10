@@ -11,7 +11,7 @@ import { ArchivePageRoutingModule } from './archive-page-routing.module';
     ArchivePageComponent
   ],
   imports: [
-    CommonModule,FragmentModule,ArchivePageRoutingModule
+    CommonModule,ArchivePageRoutingModule,FragmentModule
   ]
 })
 export class ArchivePageModule { 

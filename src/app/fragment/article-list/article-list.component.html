@@ -1,3 +1,27 @@
-<div *ngFor="let summery of posts">
-    {{summery.title}}
+<div class="post_summery__list">
+  <ng-container *ngFor="let post of posts">
+    <article class="post_summery" *ngIf="post!=undefined">
+      <div class="eye_catch">
+        <a class="eye_catch_link" [routerLink]="post.path">
+          <img class="eye_catch__thumbnail" [src]="post.thumbnail" *ngIf="post.thumbnail!=undefined" />
+          <img class="eye_catch__thumbnail" src="/assets/images/default_thumbnail.png"
+            *ngIf="post.thumbnail==undefined" />
+        </a>
+      </div>
+      <div class="post_info">
+        <div class="post_meta">
+          <a class="series" *ngIf="post.series!=undefined"
+            [routerLink]="'/archives/series/'+post.series+'/0'">{{post.series}}</a>
+          <ul class="categories" *ngIf="post.category!=undefined">
+            <li class="categories__element" *ngFor="let cat of post.category"><a class="categories__element__tag"
+                [routerLink]="'/archives/category/'+cat+'/0'">{{cat}}</a></li>
+          </ul>
+        </div>
+        <a class="title_link" [routerLink]="post.path">
+          <h2 class="post_title">{{post.title}}</h2>
+        </a>
+        <time class="posted_date">投稿:{{post.date|date:"yyyy-MM-dd HH:mm"}}</time>
+      </div>
+    </article>
+  </ng-container>
 </div>

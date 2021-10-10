@@ -3,12 +3,12 @@ title: dummy2
 description: blog description
 published: true
 
-seriese:
+series: 'dummy'
 category: 
  - history
  - angular
-slug: fugafuga
+slug: dummy2
 
 ---
 
-fugafuga
+dummy2

@@ -20,14 +20,13 @@ export const config: ScullyConfig = {
 
 archives.registerPlugin()
 
-const ARCHIVE_SIZE=8;
 const archiveConfig: archives.ArchivesRoutePluginConfig =
 {
   options: [
     {
       articleRoot: "/article",
       archiveRoot: "/archives",
-      archiveSize: ARCHIVE_SIZE,
+      archiveSize: 8,
     }
   ]
 }

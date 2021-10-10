@@ -1,7 +1,74 @@
-h1 {
-  color:rgb(51, 6, 37);
-  background-color: rgb(248, 211, 236);
-  padding: 5px;
-  border-radius: 5px;
-  width: fit-content;
+@import "/src/styles/skin.scss";
+@import "/src/styles/layout";
+
+.main_column {
+  @include contents-container;
+}
+.indexing{
+  margin:1rem 0;
+}
+
+.article{
+  counter-reset: step_count 0;
+}
+.article__contents {
+  @include contents_skin;
+
+  padding: 1rem;
+  margin-bottom: 1rem;
+  counter-reset: section_heading 0;
+  line-height:2rem;
+}
+
+p {
+  padding-left:0rem;
+  @media screen and (min-width:480px){
+    padding-left:1rem;    
+  }
+  display: block;
+  width: 100%;
+}
+
+img {
+  max-width: 90%;
+  display: block;
+  max-height: 360px;
+  margin: 1rem 1rem 3rem;
+}
+
+h2 {
+  display: block;
+  width: 100%;
+  counter-increment: section_heading;
+  margin: 4rem auto 2rem 0;
+}
+
+h2::before {
+  color: $color-accent;
+  content: counter(section_heading, upper-alpha)". ";
+}
+
+h3{
+  margin:2rem 0 1rem;
+}
+
+.step {
+  padding:2rem 0;
+  position: relative;
+  counter-increment: step_count;
+  position: relative;
+}
+.step:first-child{
+  border-top: solid 1px $color-separater;
+}
+
+.step::before {
+  content: "STEP "counter(step_count);
+  margin: 0 0.5rem 0 0;
+  padding: 0.1rem 0.2rem;
+  border: solid 1px $color-contents_bg;
+}
+
+ul,ol{
+  padding-left: 2rem;
 }

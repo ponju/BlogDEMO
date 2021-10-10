@@ -1,0 +1,17 @@
+<div class="article__header content_bandary contents_base" *ngIf="post!=null || post!=undefined">
+  <div class="print-page">
+    <div class="article__header__eyecatch">
+      <img class="article__header__eyecatch__thumbnail" [src]="thumbnailURI" *ngIf='thumbnailURI && thumbnailURI!=""'>
+    </div>
+    <div class="post_info">
+      <div class="post_meta">
+        <a class="series" [href]="'/archives/series/'+post.series+'/0'">{{post.series}}</a>
+        <ul class="categories" *ngIf="post.category!=undefined">
+          <li class="categories__element" *ngFor="let cat of post?.category"><a class="categories__element__tag"
+              [href]="'/archives/category/'+cat+'/0'">{{cat}}</a></li>
+        </ul>
+      </div>
+      <h1 class="article__header__title">{{post.title}}</h1>
+      <time class="article_header__date">投稿:{{(post.date|date:"yyyy/MM/dd HH:mm")}}</time>
+  </div>
+</div>

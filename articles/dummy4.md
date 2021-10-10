@@ -1,5 +1,5 @@
 ---
-title: dummy3
+title: dummy4
 description: blog description
 published: true
 
@@ -7,8 +7,8 @@ series: 'dummy'
 category: 
  - history
  - angular
-slug: dummy3
+slug: dummy4
 
 ---
 
-dummy3
+dummy4

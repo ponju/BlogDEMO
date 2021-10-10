@@ -11,3 +11,7 @@ html{
     width:100%;
     margin:auto;
 }
+
+.main_column{
+    @include contents_container;
+}

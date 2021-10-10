@@ -11,8 +11,8 @@ import "@fortawesome/fontawesome-free/js/fontawesome.js"
 import "@fortawesome/fontawesome-free/js/brands.js"
 import "@fortawesome/fontawesome-free/js/regular.js"
 import "@fortawesome/fontawesome-free/js/solid.js";
+
 import { ScullyLibModule } from '@scullyio/ng-lib';
-import { ArchivePageModule } from './archive-page/archive-page.module'
 
 @NgModule({
   declarations: [
@@ -24,7 +24,6 @@ import { ArchivePageModule } from './archive-page/archive-page.module'
     AppRoutingModule,
     FragmentModule,
     ScullyLibModule,
-    ArchivePageModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

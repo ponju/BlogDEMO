@@ -3,12 +3,12 @@ title: dummy1
 description: blog description
 published: true
 
-seriese:
+series: 'dummy'
 category: 
  - history
  - angular
-slug: hogehoge
+slug: dummy1
 
 ---
 
-HOGEHOGE
+dummy1

@@ -1,0 +1,133 @@
+@import "/src/styles/skin";
+@import "/src/styles/layout";
+
+.post_summery {
+  @include contents_skin;
+  display:flex;
+  margin:0 auto 2rem;
+  border:solid 1px $color-secondary;
+  justify-content: stretch;
+  @media screen and (max-width:509px){
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width:510px){
+    height:8rem;
+  }
+}
+
+.eye_catch{
+  flex-shrink: 0;
+  margin-right:auto;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width:509px){
+    width:100%;
+    display:block;
+    max-height:150px;
+  }
+  @media screen and(min-width:510px){
+    width:200px;
+  }
+}
+.eye_catch_link{
+  width:100%;
+  height:100%;
+  display: flex;
+  border-right:solid 1px $color-separater;
+  background-color: $color-separater;
+}
+.eye_catch__thumbnail{
+  margin:auto;
+
+  width:auto;
+  height:auto;
+  
+  @media screen and (max-width:509px){
+    max-width:100%;
+    max-height:100%;
+    display:block;
+  }
+  @media screen and(min-width:510px){
+    max-width:100%;  
+    max-height:100%;
+  }
+  display:block;
+}
+
+.post_info{
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  
+  @media screen and (max-width:509px) {
+    border:none;
+    display:flex;
+    width:100%;
+  }
+}
+
+
+.post_meta{
+  width:100%;
+  margin-bottom:0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  height:fit-content;
+}
+.series{
+  @media screen and(max-width:509px) {
+    margin-left: 0;
+  }
+
+  min-width:3.6rem;
+  padding:0 1rem;
+  text-align: center;
+  display:inline-block;
+  width:fit-content;
+  color:white;
+  background-color:$color-accent;
+  text-decoration: none;
+}
+.categories{
+  display: inline-block;
+  margin-left:auto;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.categories__element:first-child{
+  margin:0;
+}
+.categories__element{
+  margin-left:0.5rem;
+  display: inline-block;
+}
+
+.categories__element__tag{
+  @include inversive_skin;
+  min-width: 3.6rem;
+  text-align: center;
+  width: fit-content;
+  padding:0 0.5rem;
+  text-decoration: none;
+}
+
+.title_link{
+  font-size:1rem;
+  display:block;
+  width:100%;
+}
+
+.post_title {
+  font-size: 1rem;
+  width: 100%;
+  padding:0 1rem;
+
+  @media screen and (max-width:510px) {
+    display: block;
+    margin-left: 0;
+  }
+}
+.posted_date{
+  margin:0 1rem
+}

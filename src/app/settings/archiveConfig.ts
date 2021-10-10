@@ -1,1 +1,0 @@
-export const ARCHIVE_SIZE=8;

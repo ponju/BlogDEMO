@@ -1,0 +1,125 @@
+@import "/src/styles/skin";
+
+.article__header {
+  margin: 1rem auto 1rem;
+  @include contents_skin
+}
+
+.article__header .print-page::after {
+  content: none;
+}
+
+
+
+.article__header__eyecatch {
+  background-color: $color-secondary;
+  height:200px;
+  text-align: center;
+  display:flex;
+  justify-content: center;
+}
+
+.article__header__eyecatch__thumbnail{
+  max-height:100%;
+  max-width:100%;
+  display: inline-block;
+  height:auto;
+  width:auto;
+  margin:auto;
+}
+
+.article__header__title {
+  font-size: 1.1rem;
+  width: 100%;
+  border-bottom: solid 4px $color-contents_txt;
+  padding:0 1rem;
+
+  @media screen and (max-width:480px) {
+    display: block;
+    margin-left: 0;
+  }
+}
+
+.article__header__eyecatch_thumbnail {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.meta_info {
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+}
+
+.article_header__date {
+  display:inline-block;
+  margin:0 1rem;
+}
+
+.article__header__updated_date {
+  display:inline-block;
+  margin-right:1rem;
+}
+
+.post_info{
+}
+
+.post_meta {
+  margin-bottom:0.25rem;
+  height:fit-content;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.post_meta,.categories,.series{
+  @media screen and(max-width:510px){
+    justify-content: center;
+    margin:auto;
+  }
+}
+.categories {
+  @media print {
+    display: none;
+  }
+
+  display: inline-flex;
+  margin-left:auto;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.categories__element:first-child{
+  margin:0;
+}
+.categories__element{
+  margin-left:0.5rem;
+}
+
+.categories__element__tag{
+  @include inversive_skin;
+  min-width: 3.6rem;
+  text-align: center;
+  display: inline-block;
+  width: fit-content;
+  text-decoration: none;
+}
+.series {
+  width:45%;
+  min-width:3.6rem;
+  padding:0 1rem;
+  text-align: center;
+  display:inline-block;
+  width:fit-content;
+  text-decoration: none;
+
+  color:white;
+  background-color:$color-accent;
+}
+
+
+.posted_date{
+  padding:0 0.5rem;
+}

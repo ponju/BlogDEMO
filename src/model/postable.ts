@@ -1,59 +1,84 @@
 import { ScullyRoute } from "@scullyio/ng-lib";
-import { Moment } from 'moment'
-import * as moment from 'moment'
+import * as moment from "moment";
+import { Moment } from "moment";
 
-export interface Postable extends ScullyRoute {
-    seriese:string|undefined
-    order:number|undefined
-    category: string|string[] | undefined
-    tag: string | string[] | undefined
-    date: string | undefined
-    moment: Moment | undefined
+export interface Postable{
+  title:string|undefined
+  summery:string|undefined;
+  published:boolean
+  thumbnail: string | undefined;
+  date:string|undefined;
+  moment:moment.Moment|undefined
+  order?: number | undefined;
+  category?: string[] | undefined;
+  series?: string | undefined;
+  path:string|undefined;
 }
 
 export class Post implements Postable {
-    [prop: string]: any;
-    seriese:string|undefined;
-    order:number|undefined
-    category: string |string[]| undefined;
-    tag: string | string[] | undefined;
-    date: string | undefined
-    private _moment!: Moment;
-    route!: string;
-    title?: string | undefined;
-    slugs?: string[] | undefined;
-    published?: boolean | undefined;
-    slug?: string | undefined;
-    sourceFile?: string | undefined;
-    lang?: string | undefined;
+  private _moment?:Moment;
+  constructor(private route:ScullyRoute) {    
+  }
+  get title():string|undefined{
+    return this.route.title==undefined?"No Title":this.route.title;
+  }
+  get summery(): string | undefined{
+    return this.route.summery;
+  }
+  get path():string|undefined{
+    return this.route.route;
+  }
+  get date():string|undefined{
+    return this.route.date;
+  }
+  get published(): boolean{
+    return this.route.published==undefined?false:this.route.published;
+  }
+  get thumbnail(): string | undefined{
+    return this.route.thumbnail
+  }
+  get order(): number | undefined{
+    return this.route.order;
+  }
+  get category():string[]|undefined{
+    return this.route.category;
+  }
+  get series():string | undefined{
+    return this.route.series
+  }
+  get moment():moment.Moment|undefined {
+    if (this._moment!=undefined) {
+      return this._moment;
+    }
+    else if (this.route.date != undefined) {
+      this._moment = moment(this.route.date)
+      return this._moment;
+    }
+    return undefined;
+  }
+    
+  static Compare(a: Postable, b: Postable) {
+    if (a.series != undefined && b.series != undefined && a.series == b.series) {
+      if (a.order != undefined && b.order != undefined) {
+        return a.order - b.order
+      }
+    }
+    let aMoment = a.moment;
+    let bMmoment = b.moment;
 
-    get moment() {
-        if (this._moment != undefined) {
-            return this._moment
-        } else if (this.date != undefined) {
-            this._moment = moment(this.date)
-            return this._moment
-        }
-        return undefined;
+    if (aMoment == undefined && bMmoment == undefined) {
+      return 0;
+    } else if (aMoment == undefined) {
+      return -1;
+    } else if (bMmoment == undefined) {
+      return 1;
+    } else {
+      return aMoment.isBefore(bMmoment)?1:(aMoment.isAfter(bMmoment)?-1:0);
     }
 
-    static Compare(a:Postable,b:Postable):number{
-        if(a.seriese!=undefined && a.seriese==b.seriese){
-            if(a.order!=undefined&&b.order!=undefined){
-                return a.order-b.order;
-            }else{
-                if(a.moment==undefined && b.moment==undefined){
-                    return 0;
-                }else if(a.moment==undefined){
-                    return -1;
-                }else if(b.moment==undefined){
-                    return 1;
-                }else{
-                    return a.moment.isBefore(b.moment)?(a.moment.isSame(b.moment)?0:-1):1;
-                }
-            }
-        }else{
-            return 0;
-        }
-    }
+  }
 }
+
+export const OUTPUT_FORMAT = "yyyy-MM-DD HH:mm";
+
+

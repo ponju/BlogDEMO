@@ -31,10 +31,11 @@
 .site_header__title{
     flex-shrink:1;
     margin-left:1rem;
-    font-size:16pt;
+    font-size:1rem;
 }
 .global_menu_call{
     @include inversive_skin;
+    flex-shrink: 0;
     margin-left:auto;
     border-left:solid 1px $color-separater;
 }

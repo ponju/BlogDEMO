@@ -1,14 +1,14 @@
 ---
-title: dummy3
+title: dummy5
 description: blog description
 published: true
 
-series: 'dummy'
+seriese: 'dummy'
 category: 
  - history
  - angular
-slug: dummy3
+slug: dummy5
 
 ---
 
-dummy3
+dummy5

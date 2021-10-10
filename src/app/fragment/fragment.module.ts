@@ -6,6 +6,9 @@ import { VerticalAcordionComponent } from './vertical-acordion/vertical-acordion
 import { HorizontalAcordionComponent } from './horizontal-acordion/horizontal-acordion.component';
 import { BackScreenComponent } from './back-screen/back-screen.component';
 import { ArticleListComponent } from './article-list/article-list.component';
+import { RouterModule } from '@angular/router';
+import { ArticleHeaderComponent } from './article-header/article-header.component';
+import { ScullyContentModule, ScullyLibModule } from '@scullyio/ng-lib';
 
 @NgModule({
   declarations: [
@@ -14,10 +17,11 @@ import { ArticleListComponent } from './article-list/article-list.component';
     VerticalAcordionComponent,
     HorizontalAcordionComponent,
     BackScreenComponent,
-    ArticleListComponent
+    ArticleListComponent,
+    ArticleHeaderComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,RouterModule,ScullyLibModule
   ],
   exports: [
     SiteHeaderComponent,
@@ -25,7 +29,8 @@ import { ArticleListComponent } from './article-list/article-list.component';
     VerticalAcordionComponent,
     HorizontalAcordionComponent,
     BackScreenComponent,
-    ArticleListComponent
+    ArticleListComponent,
+    ArticleHeaderComponent
   ]
 })
 export class FragmentModule { }

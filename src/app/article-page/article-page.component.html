@@ -1,7 +1,12 @@
-<h3>ScullyIo content</h3>
-<hr>
-
-<!-- This is where Scully will inject the static HTML -->
-<scully-content></scully-content>
-<hr>
-<h4>End of content</h4>
+<div class="page_columns_container">
+    <main class="main_column">
+      <article class="article">
+        <article-header [post]="post$|async">
+        </article-header>
+        <div class="article__contents">
+          <scully-content></scully-content>
+        </div>
+      </article>
+    </main>
+  </div>
+  

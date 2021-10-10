@@ -3,22 +3,23 @@ import { ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
 import { map} from 'rxjs/operators';
 import { ArchiveContext } from 'src/model/archivesContext';
-import { Postable } from 'src/model/postable';
+import { Post, Postable } from 'src/model/postable';
 
+const DEFAULT_ARTICLE_ROOT="/article"
+const DEFAULT_ARCHIVE_ROOT="/archives"
 const DEFAULT_ARCHIVE_SIZE=8;
-const ARCHIVE_ROOT="/archives"
 
 @Injectable({
   providedIn: 'root'
 })
-export class ArchivesContextService
+export class ArchiveContextService
  {
   constructor(private scully:ScullyRoutesService) { }
-  getPlaneArchive$(archiveSize:number=DEFAULT_ARCHIVE_SIZE,archiveRoot=ARCHIVE_ROOT):Observable<ArchiveContext>{
+  getPlaneArchive$(articleRoot=DEFAULT_ARTICLE_ROOT,archiveRoot=DEFAULT_ARCHIVE_ROOT,archiveSize:number=DEFAULT_ARCHIVE_SIZE,):Observable<ArchiveContext>{
     return this.scully.available$.pipe(
       map(
         (routeTable)=>{
-          let archivePosts=routeTable.filter((route)=>route.published).map(r=>r as Postable)
+          let archivePosts=routeTable.filter((route)=>route.published).map(r=>new Post(r) as Postable)
           const links:string[]=[];
           const countOfPost=archivePosts.length;
           const countOfArchive=Math.floor(countOfPost/archiveSize)+1;

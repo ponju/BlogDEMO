@@ -1,5 +1,5 @@
 ---
-title: dummy3
+title: dummy0
 description: blog description
 published: true
 
@@ -7,8 +7,12 @@ series: 'dummy'
 category: 
  - history
  - angular
-slug: dummy3
+slug: dummy
 
 ---
 
-dummy3
+```ts
+
+export const HOGE=333;
+
+```
