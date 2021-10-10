@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 import { ArchiveContext } from 'src/model/archivesContext';
 import { ArchiveContextService } from 'src/app/service/archive-context.service';
 import { ARCHIVES_ROOT, ARCHIVE_SIZE, ARTICLE_ROOT } from 'src/model/settings/archiveConfig';
+import { Title } from '@angular/platform-browser';
+import { SiteName } from '../app.component';
 
 @Component({
   selector: 'archive-page',
@@ -30,18 +32,19 @@ export class ArchivePageComponent implements OnInit {
   }
 
   constructor(
-    private route: ActivatedRoute, private archiveService: ArchiveContextService
+    private route: ActivatedRoute, private archiveService: ArchiveContextService,private _title:Title
   ) {
   }
 
 
   ngOnInit(): void {
     let snapshot = this.route.snapshot;
-
+    
     let initialClazz: string | undefined = snapshot.params.classify
     let initialGroup: string | undefined = snapshot.params.initGroup
     let initialPage: number | undefined = snapshot.params.page;
-
+    this._title.setTitle(`archives${initialPage}|${SiteName}`)
+    
     if (initialClazz == undefined || initialGroup == undefined) {
       initialClazz = undefined;
       initialGroup = undefined;
@@ -49,28 +52,29 @@ export class ArchivePageComponent implements OnInit {
     if (initialPage == undefined) {
       initialPage = 0;
     }
-
+    
     this.classify = initialClazz;
     this.group = initialGroup;
     this.page = initialPage;
-
+    
     let params = this.route.params.subscribe(
       (parameters) => {
         let newClass: string | undefined = parameters.classify;
         let newGroup: string | undefined = parameters.group;
         let newPage: number | undefined = parameters.page;
-
+        
         if (newClass == undefined || newGroup == undefined) {
           newClass = undefined;
           newGroup = undefined;
           this.context$ = this.archiveService.getPlaneArchive$(ARTICLE_ROOT, ARCHIVES_ROOT, ARCHIVE_SIZE);
         } else {
         }
-
+        
         this.classify = newClass;
         this.group = newGroup;
         this.page = newPage;
+        this._title.setTitle(`archives${initialPage}|${SiteName}`)
       }
-    )
+      )
+    }
   }
-}

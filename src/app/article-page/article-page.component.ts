@@ -1,4 +1,5 @@
 import { Component, OnChanges, OnInit, SimpleChanges, ViewEncapsulation } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router, ROUTES } from '@angular/router';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { highlight } from 'prismjs';
@@ -18,10 +19,11 @@ declare var ng: any;
 })
 export class ArticlePageComponent implements OnInit,OnChanges {
   post$: Observable<Post> = this.scully.getCurrent().pipe(map((route,index)=>new Post(route)));
-  constructor(private router: Router, private route: ActivatedRoute, private scully: ScullyRoutesService, private highlight: HighlightService) {
+  constructor(private router: Router, private route: ActivatedRoute, private scully: ScullyRoutesService, private highlight: HighlightService,private _title:Title) {
   }
   ngOnInit(): void {
     this.highlight.init()
+    this.scully.getCurrent().subscribe(()=>{console.log("hogege")})
   }
   ngOnChanges():void{
     this.highlight.highlightAll();

@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 import { ArchiveContext } from 'src/model/archivesContext';
 import { ArchiveContextService } from 'src/app/service/archive-context.service';
 import { ARCHIVES_ROOT, ARCHIVE_SIZE, ARTICLE_ROOT } from 'src/model/settings/archiveConfig';
+import { Title } from '@angular/platform-browser';
+import { SiteName } from '../app.component';
 
 @Component({
   selector: 'index-page',
@@ -12,7 +14,7 @@ import { ARCHIVES_ROOT, ARCHIVE_SIZE, ARTICLE_ROOT } from 'src/model/settings/ar
 })
 
 export class IndexPageComponent implements OnInit {
-  context$?: Observable<ArchiveContext> = this.archiveService.getPlaneArchive$(ARTICLE_ROOT, ARCHIVES_ROOT, ARCHIVE_SIZE)
+  context$?: Observable<ArchiveContext> = this._archiveService.getPlaneArchive$(ARTICLE_ROOT, ARCHIVES_ROOT, ARCHIVE_SIZE)
 
   classify?: string;
   group?: string;
@@ -37,11 +39,12 @@ export class IndexPageComponent implements OnInit {
   }
 
   constructor(
-    private route: ActivatedRoute, private archiveService: ArchiveContextService,
+    private route: ActivatedRoute, private _archiveService: ArchiveContextService,private _title:Title
   ) {
   }
 
   ngOnInit(): void {
+    this._title.setTitle(SiteName)
     let params = this.route.params.subscribe(
       (parameters) => {
         let newClass: string | undefined = parameters.classify;
@@ -52,7 +55,7 @@ export class IndexPageComponent implements OnInit {
           if (newClass == undefined || newGroup == undefined) {
             newClass = undefined;
             newGroup = undefined;
-            this.context$ = this.archiveService.getPlaneArchive$(ARTICLE_ROOT, ARCHIVES_ROOT, ARCHIVE_SIZE)
+            this.context$ = this._archiveService.getPlaneArchive$(ARTICLE_ROOT, ARCHIVES_ROOT, ARCHIVE_SIZE)
           } else {
           }
         }

@@ -5,6 +5,7 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
 import { FragmentModule } from '../fragment/fragment.module';
 import { IndexPageRoutingModule } from './index-page-routing-module';
 
+
 @NgModule({
   declarations: [
     IndexPageComponent
