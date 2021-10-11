@@ -5,7 +5,6 @@ published: true
 
 series: 'dummy'
 category: 
- - history
  - angular
 slug: dummy3
 

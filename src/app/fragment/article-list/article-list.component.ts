@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Post, Postable } from 'src/model/postable';
+import { Post, Postable } from 'src/model/post';
 
 @Component({
   selector: 'article-list',

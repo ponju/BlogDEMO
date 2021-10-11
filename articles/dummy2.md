@@ -3,10 +3,9 @@ title: dummy2
 description: blog description
 published: true
 
-series: 'dummy'
 category: 
  - history
- - angular
+ - scully
 slug: dummy2
 
 ---

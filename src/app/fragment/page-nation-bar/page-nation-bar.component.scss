@@ -1,0 +1,28 @@
+@import "/src/styles/skin";
+
+.page_nation_container{
+    font-weight:bold;
+    margin:auto;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.page_nation__links{
+    list-style:none;
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+}
+.page_nation_element{
+    display:inline-block;
+    border:solid 1px $color-separater;
+    margin:0.2rem;
+    padding:0.1rem;
+}
+.page_link,.page_link:visited{
+    @include contents_skin;
+}
+.page_link:hover{
+    color:$color-accent;
+}

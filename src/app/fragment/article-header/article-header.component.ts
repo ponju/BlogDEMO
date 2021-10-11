@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ScullyRoute } from '@scullyio/ng-lib';
-import { Post } from 'src/model/postable';
+import { Post } from 'src/model/post';
 
 @Component({
   selector: 'article-header',

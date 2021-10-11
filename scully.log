@@ -91,3 +91,63 @@ No configuration for route "/archives/:page" found. Skipping
 This is a development tool for Scully applications.
 You can ignore the warning (TLS) or run scully with --no-warning
 ****************************************************************************************No configuration for route "/archives/:page" found. Skipping
+No configuration for route "/archives/:page" found. Skipping
+No configuration for route "/archives/:page" found. Skipping
+No configuration for route "/archives/:page" found. Skipping
+No configuration for route "/archives/:page" found. Skipping
+No configuration for route "/archives/:page" found. Skipping
+No configuration for route "/archives/:page" found. Skipping
+No configuration for route "/archives/:page" found. Skipping
+No configuration for route "/archives/:page" found. Skipping
+No configuration for route "/archives/:page" found. Skipping
+No configuration for route "/archives/:page" found. Skipping
+No configuration for route "/archives/:page" found. Skipping
+No configuration for route "/archives/:page" found. Skipping
+****************************************************************************************
+This is a development tool for Scully applications.
+You can ignore the warning (TLS) or run scully with --no-warning
+****************************************************************************************No configuration for route "/archives/:page" found. Skipping
+No configuration for route "/archives/:page" found. Skipping
+No configuration for route "/archives/:page" found. Skipping
+No configuration for route "/archives/:page" found. Skipping
+No configuration for route "/archives/:page" found. Skipping
+No configuration for route "/archives/:page" found. Skipping
+No configuration for route "/archives/:page" found. Skipping
+No configuration for route "/archives/:page" found. Skipping
+No configuration for route "/archives/:page" found. Skipping
+****************************************************************************************
+This is a development tool for Scully applications.
+You can ignore the warning (TLS) or run scully with --no-warning
+****************************************************************************************No configuration for route "/archives/:page" found. Skipping
+No configuration for route "/archives/:page" found. Skipping
+No configuration for route "/archives/:page" found. Skipping
+****************************************************************************************
+This is a development tool for Scully applications.
+You can ignore the warning (TLS) or run scully with --no-warning
+****************************************************************************************No configuration for route "/archives/:page" found. Skipping
+No configuration for route "/archives/:page" found. SkippingRoute "/article" not provided by angular app
+
+No configuration for route "/archives/:page" found. Skipping
+
+      ----------------
+      Error, missing "<scully-content>" in route "/article/dummy4"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "http://localhost:4200/article/dummy4"
+      when you serve your app with ng serve and then in the browsers console run:
+      document.querySelector('scully-content')
+      ----------------
+      
+No configuration for route "/archives/:page" found. Skipping
+****************************************************************************************
+This is a development tool for Scully applications.
+You can ignore the warning (TLS) or run scully with --no-warning
+****************************************************************************************No configuration for route "/archives/:page" found. SkippingNo configuration for route "/archives/:classify/:group/:page" found. Skipping
+
+****************************************************************************************
+This is a development tool for Scully applications.
+You can ignore the warning (TLS) or run scully with --no-warning
+****************************************************************************************No configuration for route "/archives/:classify/:group/:page" found. SkippingNo configuration for route "/archives/:page" found. Skipping
+
+Received Kill commandClosed servers
+

@@ -8,6 +8,10 @@ const routes: Routes = [
     component: ArchivePageComponent,
   },
   {
+    path: ':classify/:group/:page',
+    component: ArchivePageComponent,
+  },
+  {
     path: '**',
     component: ArchivePageComponent,
   }

@@ -1,4 +1,4 @@
-import { Postable } from "./postable";
+import { Postable } from "./post";
 
 export interface ArchiveContext {
     classify: string | string[] | undefined

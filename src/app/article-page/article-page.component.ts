@@ -5,7 +5,7 @@ import { highlight } from 'prismjs';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/internal/operators/map';
 import { HighlightService } from 'src/app/service/highlight.service';
-import { Post } from 'src/model/postable';
+import { Post } from 'src/model/post';
 
 declare var ng: any;
 

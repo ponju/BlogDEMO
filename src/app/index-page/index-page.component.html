@@ -2,5 +2,6 @@
   <main class="main_column">
     <h1 class="indexing">Latest Posts</h1>
     <article-list *ngIf="(context$|async)!=null"[posts]="(context$|async)!.archives|slice:from:till"></article-list>
+    <page-nation-bar homeUrl="/" [urls]="(context$|async)?.pagenationURLs" [current]="page"></page-nation-bar>
   </main>
 </div>

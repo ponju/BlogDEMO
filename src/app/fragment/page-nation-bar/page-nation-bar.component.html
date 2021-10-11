@@ -1,0 +1,10 @@
+<div class="page_nation_container">
+    <ul class="page_nation__links">
+        <li class="page_nation_element" *ngFor="let link of urls; index as i;">
+            <span *ngIf="i==current" class="self_link">
+                {{i}}
+            </span>
+            <a *ngIf="i!=current" class="page_link" [routerLink]="link">{{i}}</a>
+        </li>
+    </ul>
+</div>

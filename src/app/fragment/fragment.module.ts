@@ -9,6 +9,7 @@ import { ArticleListComponent } from './article-list/article-list.component';
 import { RouterModule } from '@angular/router';
 import { ArticleHeaderComponent } from './article-header/article-header.component';
 import { ScullyContentModule, ScullyLibModule } from '@scullyio/ng-lib';
+import { PageNationBarComponent } from './page-nation-bar/page-nation-bar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ScullyContentModule, ScullyLibModule } from '@scullyio/ng-lib';
     HorizontalAcordionComponent,
     BackScreenComponent,
     ArticleListComponent,
-    ArticleHeaderComponent
+    ArticleHeaderComponent,
+    PageNationBarComponent
   ],
   imports: [
     CommonModule,RouterModule,ScullyLibModule
@@ -30,7 +32,8 @@ import { ScullyContentModule, ScullyLibModule } from '@scullyio/ng-lib';
     HorizontalAcordionComponent,
     BackScreenComponent,
     ArticleListComponent,
-    ArticleHeaderComponent
+    ArticleHeaderComponent,
+    PageNationBarComponent
   ]
 })
 export class FragmentModule { }

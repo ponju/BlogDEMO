@@ -3,7 +3,7 @@ import { ActivatedRoute, ParamMap, Params } from '@angular/router';
 import { Observable } from 'rxjs';
 import { ArchiveContext } from 'src/model/archivesContext';
 import { ArchiveContextService } from 'src/app/service/archive-context.service';
-import { ARCHIVES_ROOT, ARCHIVE_SIZE, ARTICLE_ROOT } from 'src/model/settings/archiveConfig';
+import { ARCHIVES_ROOT, ARCHIVE_SIZE, ARTICLE_ROOT } from 'src/settings/archiveConfig';
 
 @Component({
   selector: 'index-page',
@@ -12,7 +12,7 @@ import { ARCHIVES_ROOT, ARCHIVE_SIZE, ARTICLE_ROOT } from 'src/model/settings/ar
 })
 
 export class IndexPageComponent implements OnInit {
-  context$?: Observable<ArchiveContext> = this.archiveService.getPlaneArchive$(ARTICLE_ROOT, ARCHIVES_ROOT, ARCHIVE_SIZE)
+  context$?: Observable<ArchiveContext> = this.archiveService.getPlaneArchiveContext$(ARTICLE_ROOT, ARCHIVES_ROOT, ARCHIVE_SIZE)
 
   classify?: string;
   group?: string;
@@ -52,8 +52,9 @@ export class IndexPageComponent implements OnInit {
           if (newClass == undefined || newGroup == undefined) {
             newClass = undefined;
             newGroup = undefined;
-            this.context$ = this.archiveService.getPlaneArchive$(ARTICLE_ROOT, ARCHIVES_ROOT, ARCHIVE_SIZE)
+            this.context$ = this.archiveService.getPlaneArchiveContext$(ARTICLE_ROOT, ARCHIVES_ROOT, ARCHIVE_SIZE)
           } else {
+            this.context$=this.archiveService.getClassifiedArchiveContext$(newClass,newGroup,ARTICLE_ROOT,ARCHIVES_ROOT,ARCHIVE_SIZE)
           }
         }
         if (newPage == undefined) {
