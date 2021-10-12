@@ -197,3 +197,7 @@ Received Kill commandClosed servers
 
 No configuration for route "/archives/:page" found. SkippingNo configuration for route "/archives/:classify/:group/:page" found. Skipping
 
+****************************************************************************************
+This is a development tool for Scully applications.
+You can ignore the warning (TLS) or run scully with --no-warning
+****************************************************************************************
