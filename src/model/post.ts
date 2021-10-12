@@ -3,7 +3,7 @@ import * as moment from "moment";
 import { Moment } from "moment";
 
 export interface Postable{
-  title:string|undefined
+  title:string
   summery:string|undefined;
   published:boolean
   thumbnail: string | undefined;
@@ -19,7 +19,7 @@ export class Post implements Postable {
   private _moment?:Moment;
   constructor(private route:ScullyRoute) {    
   }
-  get title():string|undefined{
+  get title():string{
     return this.route.title==undefined?"No Title":this.route.title;
   }
   get summery(): string | undefined{
